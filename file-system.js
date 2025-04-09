@@ -56,5 +56,12 @@ const fs = require("fs");
 
 // File Append Synchronously
 
-fs.appendFileSync("MERN-09", "Hello I'm from outside the file.");
-console.log("File Append");
+// fs.appendFileSync("MERN-09", "Hello I'm from outside the file.");
+// console.log("File Append");
+
+// File Append Asynchronously
+
+fs.appendFile("append.txt" , "Hello I'm from file-system.js !", (err) => {
+    if (err) throw err
+    console.log("File Append");
+});
