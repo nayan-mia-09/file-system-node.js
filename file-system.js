@@ -44,5 +44,12 @@ const fs = require("fs");
 
 // File Rename Synchronously
 
-fs.renameSync("file.txt", "mern.txt");
-console.log("File Renamed");
+// fs.renameSync("file.txt", "mern.txt");
+// console.log("File Renamed");
+
+// File Rename Asynchronously 
+
+fs.rename("mern.txt", "MERN-09", (err) => {
+    if (err) throw err
+    console.log("File Renamed");
+});
