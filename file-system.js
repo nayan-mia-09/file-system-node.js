@@ -9,9 +9,14 @@ const fs = require("fs");
 
 // File Read Asynchronously
 
-fs.readFile("file.txt" , "utf8" , (err, data) => {
-    if (err) throw err 
-    console.log(data);
-});
+// fs.readFile("file.txt" , "utf8" , (err, data) => {
+//     if (err) throw err 
+//     console.log(data);
+// });
 
-console.log("File Read Asynchronously");
+// console.log("File Read Asynchronously");
+
+// File Write Synchronously 
+
+fs.writeFileSync("file1.txt" ,"Hello I'm from file-system.js !");
+console.log("File Write Successfully.");
