@@ -32,5 +32,12 @@ const fs = require("fs");
 
 // Delete file synchronously 
 
-fs.unlinkSync("file1.txt");
-console.log("File Deleted.");
+// fs.unlinkSync("file1.txt");
+// console.log("File Deleted.");
+
+// File Deleted Asynchronously 
+
+fs.unlink("file3.txt", (err) => {
+    if (err) throw err
+    console.log("File deleted");
+});
