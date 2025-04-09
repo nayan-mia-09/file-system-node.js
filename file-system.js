@@ -49,7 +49,12 @@ const fs = require("fs");
 
 // File Rename Asynchronously 
 
-fs.rename("mern.txt", "MERN-09", (err) => {
-    if (err) throw err
-    console.log("File Renamed");
-});
+// fs.rename("mern.txt", "MERN-09", (err) => {
+//     if (err) throw err
+//     console.log("File Renamed");
+// });
+
+// File Append Synchronously
+
+fs.appendFileSync("MERN-09", "Hello I'm from outside the file.");
+console.log("File Append");
