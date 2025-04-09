@@ -37,7 +37,12 @@ const fs = require("fs");
 
 // File Deleted Asynchronously 
 
-fs.unlink("file3.txt", (err) => {
-    if (err) throw err
-    console.log("File deleted");
-});
+// fs.unlink("file3.txt", (err) => {
+//     if (err) throw err
+//     console.log("File deleted");
+// });
+
+// File Rename Synchronously
+
+fs.renameSync("file.txt", "mern.txt");
+console.log("File Renamed");
