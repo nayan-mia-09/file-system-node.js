@@ -23,9 +23,14 @@ const fs = require("fs");
 
 // File Write Asynchronously
 
-fs.writeFile("file3.txt" , "New text file created using Asynchronously ." ,(err) => {
-    if (err) throw err
-    console.log("File write successfully.");
-});
+// fs.writeFile("file3.txt" , "New text file created using Asynchronously ." ,(err) => {
+//     if (err) throw err
+//     console.log("File write successfully.");
+// });
 
-console.log("File Created Asynchronously.");
+// console.log("File Created Asynchronously.");
+
+// Delete file synchronously 
+
+fs.unlinkSync("file1.txt");
+console.log("File Deleted.");
